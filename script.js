@@ -48,4 +48,31 @@ const double = Array.from(numbers, x => 2 * x);
 
 // You will often use this method to convert the NodeList to Array. We get NodeList when we select multiple HTML elements in JavaScript.
 
+// 5. Array fill() method
+
+// If you want an array of length 5 with all the initial values set to 0. How would you do that?
+
+const arrayNew = [0, 0, 0, 0, 0];
+
+// which is totally correct. But what if the length is much larger, that's a lot of hard work.
+
+// Array.fill() method is used to fill the specified elements in the array with static values.
+
+// Syntax: Array.fill(value [, start, end])
+
+// start and end are optional parameters which specifies where to start filling (default 0) the value and where to end (default array.length)
+
+const filledArray = Array(6).fill(0);
+// console.log(filledArray.length);  // 6
+// console.log(filledArray);   // [0, 0, 0, 0, 0, 0]
+
+// Using start and end parameters
+const newNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// fill with 0 from position 4 to 7 (exclusive)
+const filledOnes = newNumbers.fill(0, 4, 8);
+
+console.log(filledOnes); // [1, 2, 3, 4, 0, 0, 0, 0, 9]
+
 // https://junaidshaikh.hashnode.dev/3-ways-to-create-arrays-in-javascript-and-array-fill-method
+
