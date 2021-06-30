@@ -44,3 +44,10 @@ console.log(arr5); // ["🌕", "🌴", "🌹", "🌵", "🍄"]  // item at 0 ind
 const arr6 = ['🌼', '🌴', '🌹', '🌵', '🍄'];
 const allRest = arr6.splice(2); // remove all the items starting at index 2
 console.log(allRest); // ["🌹", "🌵", "🍄"]
+
+// Add few items at the end of array:
+const arr7 = ['🌼', '🌴', '🌹', '🌵', '🍄'];
+const addAtEnd = arr7.splice(arr7.length, 0, '🌞', '🌚');
+
+console.log(addAtEnd); // [] => no items removed
+console.log(arr7); // (7) ["🌼", "🌴", "🌹", "🌵", "🍄", "🌞", "🌚"] => some items added at last.
