@@ -21,19 +21,26 @@ console.log('No Change: ' + noChange); // [] => starting from the index bigger t
 
 // If start is negative, it will begin that many elements from the end of the array.
 const arr3 = ['🌼', '🌴', '🌹', '🌵', '🍄'];
-const last = arr3.splice(-2); // last two elements
-console.log('Negative index: ' + last);
+const last = arr3.splice(-2); // remove all after negative index 2
+console.log(last); // ["🌵", "🍄"]
+
+const arr31 = ['🌼', '🌴', '🌹', '🌵', '🍄'];
+const lastSome = arr31.splice(-3, 2);
+console.log(lastSome); // ["🌹", "🌵"] => remove 2 items starting at index 3 from last
 
 // In item, The number you want to add(If you're removing, you can just leave this blank).
 const arr4 = ['🌼', '🌴', '🌹', '🌵', '🍄'];
 const addingItem = arr4.splice(2, 0, '⭐️', '💥'); // removing 0 item, adding two items;
-console.log(addingItem);  // [] => nothing removed
+console.log(addingItem); // [] => nothing removed
 console.log(arr4); // (7) ["🌼", "🌴", "⭐️", "💥", "🌹", "🌵", "🍄"]  =>two items added at index 2
 
 const arr5 = ['🌼', '🌴', '🌹', '🌵', '🍄'];
-const addRemove = arr5.splice(0, 1, "⭐️");
+const addRemove = arr5.splice(0, 1, '🌕');
 console.log(addRemove); // ["🌼"] =>removed item at 0 index
-console.log(arr5); // ["⭐️", "🌴", "🌹", "🌵", "🍄"]  // item at 0 index is replaced by new item
-
+console.log(arr5); // ["🌕", "🌴", "🌹", "🌵", "🍄"]  // item at 0 index is replaced by new item
 
 // When only one argument is provided, all the items after the provided starting index are removed from the array:
+
+const arr6 = ['🌼', '🌴', '🌹', '🌵', '🍄'];
+const allRest = arr6.splice(2); // remove all the items starting at index 2
+console.log(allRest); // ["🌹", "🌵", "🍄"]
